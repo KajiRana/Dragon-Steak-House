@@ -26,7 +26,7 @@ Multi-page website and direct-ordering site for **Dragon Steak House – Bar & R
 - **Upsell:** the cart suggests dishes that close the gap to free delivery, or a drink or dessert.
 - **Welcome offer:** ₹50 off the first direct order of ₹500 or more, applied in the cart (per device).
 - **Loyalty:** every 6th order from a device is flagged in the message with a free Fresh Lime Soda.
-- **Feasts:** Couple's Feast ₹999, Family Seafood Feast ₹1,499, Veggie Feast ₹899, each cheaper than a la carte.
+- **Feasts:** Couple's Feast ₹999, Family Seafood Feast ₹1,599, Veggie Feast ₹899, each cheaper than a la carte.
 - **Scheduling:** "As soon as possible" or "Schedule for later". When closed, scheduling is preselected.
 - **Checkout:** pre-filled order in **WhatsApp** or **Telegram** (+91 86985 64244). Pay by **UPI / Google Pay** (`kajirana94@oksbi`, one-tap button) or cash on delivery.
 - **Partner referrals:** QR cards link to `/?ref=<property>`. Orders include "Referred by".
@@ -50,7 +50,7 @@ This rewrites every page, `menu.js`, `sitemap.xml`, `robots.txt` and `assets/log
 Dish fields: `price`, `cat`, `tag`, `veg`, `spice` (0–3), `travels` (holds up for delivery), `img` (reuse another dish's photo), `ru` (Russian name).
 
 ## Still needed from the owner
-1. **Prices are estimates.** No public source lists this restaurant's itemised menu. Dishes come from the Google Maps chalkboard photo and from reviews, plus new breakfast, feast and dessert items. Confirm everything in `data/dishes.json`.
+1. **Prices are estimates.** No public source lists this restaurant's itemised menu. Dishes come from the Google Maps chalkboard photo and from reviews, plus new breakfast, feast and dessert items. The King Fish item is shown as King Fish Rava Fry, since the restaurant does not serve a thali. Confirm everything in `data/dishes.json`.
 2. **Photos are illustrative.** Dish and scenery photos are free-licence Unsplash images. The storefront photo (`assets/hero.jpg`) is from Google Maps. Replace files in `assets/dishes/` and `assets/gallery/` with real photos of the same names.
 3. **WhatsApp number:** Restaurant Guru shows an owner reply pointing to 99753 04260. This site uses +91 86985 64244.
 4. Google Business Profile, partner drop-offs and Instagram: see the playbook.

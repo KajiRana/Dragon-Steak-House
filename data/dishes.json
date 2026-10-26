@@ -12,31 +12,32 @@
  ],
  "dishes": [
   {
-   "slug": "king-fish-thali",
-   "name": "King Fish Thali",
+   "slug": "king-fish-rava-fry",
+   "name": "King Fish Rava Fry",
    "cat": "Seafood",
-   "price": 420,
+   "price": 450,
    "tag": "Chef's pick",
    "veg": false,
    "spice": 2,
    "serves": "1 guest",
    "prep": "20 min",
-   "short": "Goan fish curry, fried kingfish, rice and sides on a steel thali.",
-   "long": "The dish on our chalkboard that guests ask for first. A slice of kingfish, rolled in rava and shallow fried until the crust crackles, sits beside a bowl of coconut and kokum fish curry, steamed rice, a crisp papad and a cooling sol kadi. It is the whole Goan coast on one plate.",
+   "short": "Kingfish in a crisp semolina crust with lime, onion salad and green chutney.",
+   "long": "A Goan classic and the King Fish from our chalkboard. Thick kingfish steaks marinated in red masala, pressed into semolina and shallow fried until the crust shatters. Served with lime, a crunchy onion salad and green chutney.",
    "ingredients": [
     "Kingfish",
-    "Coconut",
-    "Kokum",
-    "Red chilli",
-    "Rice",
-    "Rava crust"
+    "Red masala",
+    "Semolina (rava)",
+    "Lime",
+    "Onion salad",
+    "Green chutney"
    ],
    "allergens": [
-    "Fish"
+    "Fish",
+    "Gluten"
    ],
-   "pairing": "Fresh lime soda or chilled sol kadi",
+   "pairing": "Chilled beer or fresh lime soda",
    "travels": true,
-   "ru": "Тали с королевской макрелью"
+   "ru": "Королевская макрель в манной панировке"
   },
   {
    "slug": "king-fish-fillet",
@@ -473,17 +474,17 @@
    "slug": "family-seafood-feast",
    "name": "Family Seafood Feast",
    "cat": "Combos",
-   "price": 1499,
+   "price": 1599,
    "tag": "Feeds 4",
    "veg": false,
    "spice": 2,
    "serves": "3 to 4 guests",
    "prep": "35 min",
-   "img": "king-fish-thali",
-   "short": "2 King Fish Thalis, Seafood Pasta, Crispy Dumplings, 2 Lime Sodas.",
-   "long": "A full spread for the family or the villa. Two King Fish Thalis, a Seafood Pasta, Crispy Dumplings to share and two fresh lime sodas. Free delivery included. Worth ₹1,700 a la carte.",
+   "img": "king-fish-rava-fry",
+   "short": "2 King Fish Rava Fry, Seafood Pasta, Crispy Dumplings, 2 Lime Sodas.",
+   "long": "A full spread for the family or the villa. Two King Fish Rava Fry, a Seafood Pasta, Crispy Dumplings to share and two fresh lime sodas. Free delivery included. Worth ₹1,840 a la carte.",
    "ingredients": [
-    "2 x King Fish Thali",
+    "2 x King Fish Rava Fry",
     "Seafood Pasta",
     "Crispy Dumplings",
     "2 x Fresh Lime Soda"
