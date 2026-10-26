@@ -1,90 +1,52 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dragon Steak House | Steaks, Seafood &amp; Thai in Morjim, Goa</title>
-<meta name="description" content="Dragon Steak House, Temb Vaddo beach, Morjim, Goa. Steaks, King Fish thali, seafood and Thai. Order online: free delivery above ₹1000, ₹50 below. Open 7 am–11 pm.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Restaurant","name":"Dragon Steak House","image":"assets/hero.jpg","servesCuisine":["Steak","Seafood","Thai","Goan"],"priceRange":"₹₹","telephone":"+918698564244","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.4","bestRating":"5"},"address":{"@type":"PostalAddress","streetAddress":"Temb Vaddo, beach","addressLocality":"Morjim","addressRegion":"Goa","postalCode":"403512","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":15.6182481,"longitude":73.7374652},"openingHours":"Mo-Su 07:00-23:00","acceptsReservations":true}
-</script>
-</head>
-<body>
-<header class="nav" id="nav">
-  <a class="logo" href="#top">Dragon <span>Steak House</span></a>
-  <nav><a href="#menu">Menu</a><a href="#story">Story</a><a href="#visit">Visit</a></nav>
-  <button class="cart-btn" id="openCart" aria-label="Open cart">Cart <b id="cartCount">0</b></button>
-</header>
-
-<section class="hero" id="top">
-  <div class="hero-bg" style="background-image:url(assets/hero.jpg)"></div>
-  <div class="hero-in">
-    <p class="eyebrow">Morjim Beach · Goa · ★ 4.4 on Google</p>
-    <h1>Fire-grilled steaks.<br>Fresh Goan seafood.</h1>
-    <p class="sub">We deliver anywhere. Free delivery above ₹1000, just ₹50 below within our local zone. Distance-based fee confirmed when you order.</p>
-    <div class="cta"><a class="btn gold" href="#menu">Order now</a><a class="btn ghost" href="https://wa.me/918698564244?text=Hi%20Dragon%20Steak%20House%2C%20I%27d%20like%20to%20order" target="_blank" rel="noopener">WhatsApp us</a></div>
-    <p class="open" id="openNow"></p>
-  </div>
-</section>
-
-<section class="strip">
-  <div><b>₹0</b> delivery over ₹1000</div><div><b>₹50</b> under ₹1000 (local)</div><div><b>7am–11pm</b> every day</div><div><b>UPI · GPay</b> accepted</div>
-</section>
-
-<section class="menu" id="menu">
-  <h2 class="reveal">The Menu</h2>
-  <p class="note reveal">Today's board at the shack. Prices in ₹.</p>
-  <div class="tabs" id="tabs"></div>
-  <div id="menuList"></div>
-</section>
-
-<section class="story" id="story">
-  <div class="story-img reveal" style="background-image:url(assets/hero.jpg)"></div>
-  <div class="story-txt reveal">
-    <h2>A shack with a river view</h2>
-    <p>Red laterite pillars, a thatched roof and a chalkboard that changes with the catch. Dragon Steak House sits at Temb Vaddo on Morjim beach, serving steaks, King Fish thali, Thai curries and the spinach momos regulars keep coming back for.</p>
-    <p>Dine upstairs with a river view, or let us bring it to you.</p>
-  </div>
-</section>
-
-<section class="visit" id="visit">
-  <h2 class="reveal">Visit or call</h2>
-  <div class="cards">
-    <div class="card reveal"><h3>Find us</h3><p>Temb Vaddo, beach,<br>Morjim, Goa 403512</p><a href="https://www.google.com/maps/place/Dragon+Steak+House/@15.6182481,73.7374652,17z" target="_blank" rel="noopener">Get directions →</a></div>
-    <div class="card reveal"><h3>Hours</h3><p>Every day<br>7:00 am – 11:00 pm</p></div>
-    <div class="card reveal"><h3>Order direct</h3><p>+91 86985 64244<br>WhatsApp · Telegram · Call</p><a href="tel:+918698564244">Call now →</a></div>
-  </div>
-</section>
-<footer>© <span id="yr"></span> Dragon Steak House, Morjim, Goa · Bar &amp; Restaurant</footer>
-
-<!-- Cart -->
-<div class="scrim" id="scrim"></div>
-<aside class="drawer" id="drawer" aria-label="Your cart">
-  <div class="d-head"><h3>Your order</h3><button id="closeCart" aria-label="Close">✕</button></div>
-  <div class="ship"><div class="ship-txt" id="shipTxt"></div><div class="bar"><i id="shipBar"></i></div></div>
-  <div class="lines" id="lines"></div>
-  <div class="sum" id="sum"></div>
-  <form id="co" class="co" autocomplete="on">
-    <input name="name" placeholder="Your name" required>
-    <input name="phone" type="tel" placeholder="Phone number" required pattern="[0-9+ ]{10,15}">
-    <textarea name="addr" rows="2" placeholder="Delivery address, villa or landmark" required></textarea>
-    <button type="button" class="btn ghost sm" id="loc">📍 Share my location</button>
-    <div class="pay">
-      <label><input type="radio" name="pay" value="upi" checked> UPI / Google Pay</label>
-      <label><input type="radio" name="pay" value="cod"> Cash on delivery</label>
-    </div>
-    <div class="send">
-      <button class="btn gold" type="submit" data-ch="wa">Order on WhatsApp</button>
-      <button class="btn ghost" type="submit" data-ch="tg">Order on Telegram</button>
-    </div>
-    <p class="fine">Your order opens pre-filled in the app. We deliver anywhere; for far addresses we confirm the delivery fee by distance before you pay.</p>
-  </form>
-</aside>
-<button class="fab" id="fab" aria-label="Open cart">View cart · <span id="fabTot"></span></button>
-<script src="menu.js"></script>
-<script src="app.js"></script>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dragon Steak House | Steaks, Goan Seafood &amp; Thai in Morjim</title><meta name="description" content="Dragon Steak House on Morjim beach, Goa. Fire-grilled steaks, King Fish thali, spinach momos and Thai curries. Order online, free delivery over ₹1000.">
+<meta property="og:title" content="Dragon Steak House | Steaks, Goan Seafood &amp; Thai in Morjim"><meta property="og:description" content="Dragon Steak House on Morjim beach, Goa. Fire-grilled steaks, King Fish thali, spinach momos and Thai curries. Order online, free delivery over ₹1000."><meta property="og:image" content="https://dragon-steak-house.vercel.app/assets/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Dragon Steak House", "image": "https://dragon-steak-house.vercel.app/assets/hero.jpg", "servesCuisine": ["Steak", "Seafood", "Thai", "Goan"], "priceRange": "\u20b9\u20b9", "telephone": "+918698564244", "url": "https://dragon-steak-house.vercel.app", "hasMenu": "https://dragon-steak-house.vercel.app/menu.html", "acceptsReservations": true, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "bestRating": "5", "ratingCount": "78"}, "address": {"@type": "PostalAddress", "streetAddress": "Temb Vaddo, beach", "addressLocality": "Morjim", "addressRegion": "Goa", "postalCode": "403512", "addressCountry": "IN"}, "geo": {"@type": "GeoCoordinates", "latitude": 15.6182481, "longitude": 73.7374652}, "openingHours": "Mo-Su 07:00-23:00", "hasMap": "https://www.google.co.in/maps/place/Dragon+Steak+House/@15.6182533,73.7348903,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfe9f9f8fcde5b:0x385e6ba110c0665b!8m2!3d15.6182481!4d73.7374652!16s%2Fg%2F11h8jy7752?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"}</script></head><body data-base=""><header class="hdr"><div class="wrap">
+<a class="brand" href="index.html"><b>Dragon <i>Steak</i> House</b><small>Bar &amp; Restaurant · Morjim</small></a>
+<nav class="nav"><a href="index.html" class=on>Home</a><a href="menu.html">Menu</a><a href="about.html">Our Story</a><a href="visit.html">Visit &amp; Delivery</a></nav>
+<div class="tools"><button class="cartb" data-opencart aria-label="Open order"><span>Order</span><b data-cartcount>0</b></button><button class="burger" aria-label="Menu"><i></i><i></i></button></div></div></header>
+<section class="hero"><div class="wrap"><div>
+<span class="eyebrow">Morjim Beach · Goa</span>
+<h1>Where the Goan coast meets the <em>open flame</em></h1>
+<p class="lead">Fire-grilled steaks, kingfish thali, spinach momos and Thai curries, served on a laterite-stone shack by the river. Dine with us, or have it brought to wherever you are staying.</p>
+<div class="cta"><a class="btn pri" href="menu.html">Order now</a><a class="btn sec" href="visit.html">Visit &amp; delivery</a></div>
+<div class="proof"><div><b>4.4 ★</b>Google rating</div><div><b>7 am – 11 pm</b>Open every day</div><div><b>₹0</b>Delivery over ₹1000</div></div></div>
+<div class="arch"><div class="main"><img src="assets/hero.jpg" alt="Dragon Steak House storefront on Morjim beach"></div>
+<div class="float f1"><img src="assets/dishes/fire-grilled-steak.jpg" alt=""></div><div class="float f2"><img src="assets/dishes/spinach-momos.jpg" alt=""></div>
+<div class="seal"><div><b>7–11</b>open daily</div></div></div></div></section>
+<div class="ribbon"><div><span>Free delivery over ₹1000</span><span>Open daily 7 am – 11 pm</span><span>We deliver anywhere</span><span>Pay by UPI or Google Pay</span><span>Steaks · Seafood · Thai</span><span>Morjim Beach, Goa</span><span>Free delivery over ₹1000</span><span>Open daily 7 am – 11 pm</span><span>We deliver anywhere</span><span>Pay by UPI or Google Pay</span><span>Steaks · Seafood · Thai</span><span>Morjim Beach, Goa</span></div></div>
+<section><div class="wrap"><div class="center"><span class="eyebrow">Signature dishes</span><h2>Plates our guests return for</h2><p class="lead">From the chalkboard at the door to your table. Each dish has its own page with ingredients, spice level and pairing.</p></div>
+<div class="grid g3" style="margin-top:50px"><article class="dish reveal d1"><div class="ph"><img loading="lazy" src="assets/dishes/king-fish-thali.jpg" alt="King Fish Thali"><span class="tag">Chef&#x27;s pick</span></div>
+<div class="bd"><h3><a href="dishes/king-fish-thali.html">King Fish Thali</a><span class="price">₹420</span></h3>
+<p><i class="dot nv"></i>Goan fish curry, fried kingfish, rice and sides on a steel thali.</p><div class="row"><span style="font-size:.8rem;color:var(--mute)">20 min</span><span data-qty="king-fish-thali"></span></div></div></article><article class="dish reveal d2"><div class="ph"><img loading="lazy" src="assets/dishes/fire-grilled-steak.jpg" alt="Fire-Grilled Steak"><span class="tag">Signature</span></div>
+<div class="bd"><h3><a href="dishes/fire-grilled-steak.html">Fire-Grilled Steak</a><span class="price">₹520</span></h3>
+<p><i class="dot nv"></i>Open-flame steak, seared hard and rested, with house pepper sauce.</p><div class="row"><span style="font-size:.8rem;color:var(--mute)">25 min</span><span data-qty="fire-grilled-steak"></span></div></div></article><article class="dish reveal d3"><div class="ph"><img loading="lazy" src="assets/dishes/spinach-momos.jpg" alt="Spinach Momos"><span class="tag">Guest favourite</span></div>
+<div class="bd"><h3><a href="dishes/spinach-momos.html">Spinach Momos</a><span class="price">₹240</span></h3>
+<p><i class="dot"></i>Large steamed spinach dumplings with a fiery red dip.</p><div class="row"><span style="font-size:.8rem;color:var(--mute)">15 min</span><span data-qty="spinach-momos"></span></div></div></article><article class="dish reveal d1"><div class="ph"><img loading="lazy" src="assets/dishes/seafood-pasta.jpg" alt="Seafood Pasta"></div>
+<div class="bd"><h3><a href="dishes/seafood-pasta.html">Seafood Pasta</a><span class="price">₹420</span></h3>
+<p><i class="dot nv"></i>Spaghetti tossed with prawns, mussels and fish in a garlic tomato sauce.</p><div class="row"><span style="font-size:.8rem;color:var(--mute)">20 min</span><span data-qty="seafood-pasta"></span></div></div></article><article class="dish reveal d2"><div class="ph"><img loading="lazy" src="assets/dishes/red-thai-curry.jpg" alt="Red Thai Curry"></div>
+<div class="bd"><h3><a href="dishes/red-thai-curry.html">Red Thai Curry</a><span class="price">₹380</span></h3>
+<p><i class="dot nv"></i>Coconut red curry with fragrant basil and jasmine rice.</p><div class="row"><span style="font-size:.8rem;color:var(--mute)">20 min</span><span data-qty="red-thai-curry"></span></div></div></article><article class="dish reveal d3"><div class="ph"><img loading="lazy" src="assets/dishes/king-fish-fillet.jpg" alt="King Fish Fillet"><span class="tag">Popular</span></div>
+<div class="bd"><h3><a href="dishes/king-fish-fillet.html">King Fish Fillet</a><span class="price">₹480</span></h3>
+<p><i class="dot nv"></i>Pan-seared fillet with garlic butter, lemon and seasonal greens.</p><div class="row"><span style="font-size:.8rem;color:var(--mute)">20 min</span><span data-qty="king-fish-fillet"></span></div></div></article></div>
+<div class="center" style="margin-top:44px"><a class="btn sec" href="menu.html">View the full menu</a></div></div></section>
+<section class="sand"><div class="wrap split"><div class="frame reveal"><img loading="lazy" src="assets/dishes/king-fish-thali.jpg" alt="King Fish Thali"></div>
+<div class="reveal d1"><span class="eyebrow">Our kitchen</span><h2>Simple technique. Fresh catch. Serious fire.</h2>
+<p class="lead">We cook what the coast gives us. Kingfish in a crisp rava crust, coconut curries sharpened with kokum, steaks seared over open flame and momos steamed fresh. Upstairs the tables look over the river, downstairs the breeze comes straight from the beach.</p>
+<div class="stat"><div><b>4.4</b>on Google</div><div><b>12</b>signature dishes</div><div><b>7 am</b>to 11 pm daily</div></div>
+<a class="btn pri" style="margin-top:34px" href="about.html">Read our story</a></div></div></section>
+<section><div class="wrap"><div class="center"><span class="eyebrow">Delivered to you</span><h2>Beach-side dining, wherever you stay</h2><p class="lead">Order directly from us. No commissions, no middlemen, just a quicker, fresher meal at your door.</p></div>
+<div class="steps"><div class="step reveal"><h3>Choose</h3><p>Browse the menu and add dishes to your order.</p></div><div class="step reveal d1"><h3>Send</h3><p>Share your address or pin. We confirm on WhatsApp or Telegram, with the delivery fee for your distance.</p></div><div class="step reveal d2"><h3>Pay and enjoy</h3><p>Pay by UPI, Google Pay or cash. Free delivery over ₹1000, just ₹50 below within our local zone.</p></div></div>
+<div class="chips"><span class="chip">Guests praise the momos</span><span class="chip">Friendly, attentive service</span><span class="chip">River-view upstairs seating</span><span class="chip">Fair prices</span><span class="chip">Takeaway &amp; delivery</span></div></div></section>
+<section class="sand"><div class="wrap center"><span class="eyebrow">Plan your visit</span><h2>Temb Vaddo, Morjim Beach</h2><p class="lead" style="margin-bottom:30px">Open every day from 7 am to 11 pm. Ground-floor and upstairs seating.</p>
+<div class="cta" style="justify-content:center;margin:0"><a class="btn pri" href="https://www.google.co.in/maps/place/Dragon+Steak+House/@15.6182533,73.7348903,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfe9f9f8fcde5b:0x385e6ba110c0665b!8m2!3d15.6182481!4d73.7374652!16s%2Fg%2F11h8jy7752?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Get directions</a><a class="btn sec" href="tel:+918698564244">Call +91 86985 64244</a></div></div></section>
+<footer class="ft"><div class="wrap"><div class="cols">
+<div><a class="brand" href="index.html"><b>Dragon Steak House</b><small>Bar &amp; Restaurant · Morjim</small></a>
+<p style="margin-top:16px;font-size:.92rem;max-width:300px">Steaks, Goan seafood and Thai kitchen on Morjim beach. Dine upstairs by the river, or have it brought to you.</p></div>
+<div><h5>Explore</h5><a href="menu.html">Menu</a><a href="about.html">Our Story</a><a href="visit.html">Visit &amp; Delivery</a></div>
+<div><h5>Dishes</h5><a href="dishes/king-fish-thali.html">King Fish Thali</a><a href="dishes/king-fish-fillet.html">King Fish Fillet</a><a href="dishes/goan-fish-curry-rice.html">Goan Fish Curry Rice</a><a href="dishes/grilled-fish-lime.html">Grilled Fish with Lime</a><a href="dishes/seafood-pasta.html">Seafood Pasta</a></div>
+<div><h5>Find us</h5><a href="https://www.google.co.in/maps/place/Dragon+Steak+House/@15.6182533,73.7348903,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfe9f9f8fcde5b:0x385e6ba110c0665b!8m2!3d15.6182481!4d73.7374652!16s%2Fg%2F11h8jy7752?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Temb Vaddo, beach,<br>Morjim, Goa 403512</a><a href="tel:+918698564244">+91 86985 64244</a><a href="https://wa.me/918698564244" target="_blank" rel="noopener">WhatsApp</a><a href="https://t.me/+918698564244" target="_blank" rel="noopener">Telegram</a><a>Open daily 7 am – 11 pm</a></div>
+</div><div class="copy"><span>© <span id="yr"></span> Dragon Steak House, Morjim, Goa</span><span>Dish photography is illustrative (Unsplash).</span></div></div></footer>
+<script src="menu.js"></script><script src="cart.js"></script><script>document.getElementById("yr").textContent=new Date().getFullYear()</script></body></html>

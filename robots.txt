@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dragon-steak-house.vercel.app/sitemap.xml
