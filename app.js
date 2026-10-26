@@ -1,7 +1,7 @@
 // Site config. Owner: set UPI_ID to receive in-app UPI / Google Pay payments.
 const CONFIG = {
   PHONE: "918698564244",
-  UPI_ID: "",            // e.g. "yourname@okhdfcbank" — leave empty to confirm payment over chat
+  UPI_ID: "kajirana94@oksbi",
   PAYEE: "Dragon Steak House",
   FREE_OVER: 1000,       // food subtotal at or above this ships free
   FEE: 50,               // delivery fee below the threshold
@@ -46,7 +46,7 @@ function update() {
   $("#fab").classList.toggle("on", n > 0 && !$("#drawer").classList.contains("on"));
   renderQty();
   const left = CONFIG.FREE_OVER - s;
-  $("#shipTxt").innerHTML = s === 0 ? `Free delivery above ${inr(CONFIG.FREE_OVER)}. ${inr(CONFIG.FEE)} below.`
+  $("#shipTxt").innerHTML = s === 0 ? `Free delivery above ${inr(CONFIG.FREE_OVER)}. ${inr(CONFIG.FEE)} below. We deliver anywhere. Final fee depends on distance.`
     : left > 0 ? `Add <b>${inr(left)}</b> more for <b>free delivery</b>` : `🎉 You unlocked <b>free delivery</b>`;
   $("#shipBar").style.width = Math.min(100, s / CONFIG.FREE_OVER * 100) + "%";
   $("#lines").innerHTML = n ? Object.entries(cart).map(([id, q]) => `<div class="line"><div>${items[id].name}<small>${inr(items[id].price)} each</small></div>
@@ -64,7 +64,7 @@ $("#loc").onclick = () => navigator.geolocation ? navigator.geolocation.getCurre
 function message(f) {
   const s = subtotal(), fe = fee(s), m = [`*New order: Dragon Steak House*`, ""];
   Object.entries(cart).forEach(([id, q]) => m.push(`${q} x ${items[id].name} = ${inr(items[id].price * q)}`));
-  m.push("", `Subtotal: ${inr(s)}`, `Delivery: ${fe ? inr(fe) : "FREE"}`, `*Total: ${inr(s + fe)}*`, "",
+  m.push("", `Subtotal: ${inr(s)}`, `Delivery: ${fe ? inr(fe) : "FREE"} (final fee confirmed by distance)`, `*Total: ${inr(s + fe)}*`, "",
     `Name: ${f.name.value}`, `Phone: ${f.phone.value}`, `Address: ${f.addr.value}`);
   if (loc) m.push(`Location: ${loc}`);
   const upi = f.pay.value === "upi";

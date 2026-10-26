@@ -5,7 +5,7 @@ Website and direct-ordering site for **Dragon Steak House – Bar & Restaurant**
 ## Features
 - Dark, animated one-page site: Ken Burns hero, scroll reveals, sticky category tabs, live open/closed status.
 - Menu with cart, saved in the browser between visits.
-- **Delivery rule:** free at a food subtotal of ₹1000 or more, otherwise a flat ₹50. A progress bar nudges customers toward free delivery.
+- **Delivery rule:** no distance limit. Free at a food subtotal of ₹1000 or more, otherwise ₹50 in the local zone. For farther addresses the fee is confirmed by distance over chat before payment. A progress bar nudges customers toward free delivery.
 - Checkout sends a pre-filled order to **WhatsApp** or **Telegram** (+91 86985 64244). Payment by UPI / Google Pay or cash on delivery.
 - Local SEO: Restaurant schema markup, meta description, mobile-first layout.
 
@@ -19,7 +19,7 @@ Website and direct-ordering site for **Dragon Steak House – Bar & Restaurant**
 
 ## Before launch (owner)
 1. **Confirm menu prices in `menu.js`.** Dishes come from the chalkboard in the Google Maps photo, but the **prices are estimates**.
-2. Set `UPI_ID` in `app.js` so orders include a one-tap UPI payment link. Without it, payment is confirmed over chat.
+2. UPI ID is set to `kajirana94@oksbi` in `app.js`. Orders include a one-tap UPI payment link.
 3. Replace or add real food photos in `assets/`.
 4. Add the phone number and website to the Google Business Profile.
 
