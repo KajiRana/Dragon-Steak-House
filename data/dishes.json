@@ -1,54 +1,556 @@
 {
-  "_note": "Source of truth for the menu. PRICES ARE ESTIMATES until the owner confirms them. After editing run: python3 build.py",
-  "categories": ["Seafood", "Steaks & Grill", "Thai & Asian", "Pasta", "Drinks"],
-  "dishes": [
-    {"slug": "king-fish-thali", "name": "King Fish Thali", "cat": "Seafood", "price": 420, "tag": "Chef's pick", "veg": false, "spice": 2, "serves": "1 guest", "prep": "20 min",
-     "short": "Goan fish curry, fried kingfish, rice and sides on a steel thali.",
-     "long": "The dish on our chalkboard that guests ask for first. A slice of kingfish, rolled in rava and shallow fried until the crust crackles, sits beside a bowl of coconut and kokum fish curry, steamed rice, a crisp papad and a cooling sol kadi. It is the whole Goan coast on one plate.",
-     "ingredients": ["Kingfish", "Coconut", "Kokum", "Red chilli", "Rice", "Rava crust"], "allergens": ["Fish"], "pairing": "Fresh lime soda or chilled sol kadi"},
-    {"slug": "king-fish-fillet", "name": "King Fish Fillet", "cat": "Seafood", "price": 480, "tag": "Popular", "veg": false, "spice": 1, "serves": "1 guest", "prep": "20 min",
-     "short": "Pan-seared fillet with garlic butter, lemon and seasonal greens.",
-     "long": "A thick fillet of kingfish seared skin-side down for a golden edge, finished with garlic butter and a squeeze of lemon. Served over sauteed greens, it lets the fish do the talking. Light, clean and quietly indulgent.",
-     "ingredients": ["Kingfish", "Garlic butter", "Lemon", "Seasonal greens", "Black pepper"], "allergens": ["Fish", "Dairy"], "pairing": "Fresh lime soda"},
-    {"slug": "goan-fish-curry-rice", "name": "Goan Fish Curry Rice", "cat": "Seafood", "price": 320, "tag": "Local classic", "veg": false, "spice": 2, "serves": "1 guest", "prep": "15 min",
-     "short": "Tangy coconut fish curry over steamed rice, the way Goan homes make it.",
-     "long": "Fresh catch simmered in a tangy, brick-red coconut gravy sharpened with kokum and Goan chillies. Served with a mound of steamed rice, it is everyday Goan comfort food, honest and deeply flavoured.",
-     "ingredients": ["Fresh catch", "Coconut", "Kokum", "Goan chillies", "Steamed rice"], "allergens": ["Fish"], "pairing": "Tender coconut water"},
-    {"slug": "grilled-fish-lime", "name": "Grilled Fish with Lime", "cat": "Seafood", "price": 460, "tag": "", "veg": false, "spice": 2, "serves": "1 guest", "prep": "20 min",
-     "short": "Marinated fish grilled over high heat with charred lime and herbs.",
-     "long": "Fish marinated in a bright blend of lime, garlic and chilli, then grilled hard until the edges caramelise. A charred lime on the side adds smoky acidity. Simple technique, big flavour.",
-     "ingredients": ["Fresh fish", "Lime", "Garlic", "Chilli", "Herbs"], "allergens": ["Fish"], "pairing": "Chilled beer or fresh lime soda"},
-    {"slug": "seafood-pasta", "name": "Seafood Pasta", "cat": "Pasta", "price": 420, "tag": "", "veg": false, "spice": 1, "serves": "1 guest", "prep": "20 min",
-     "short": "Spaghetti tossed with prawns, mussels and fish in a garlic tomato sauce.",
-     "long": "Al dente spaghetti folded through a garlicky tomato and white wine sauce, loaded with the day's seafood. Finished with parsley and a drizzle of olive oil. A European favourite, cooked with a Goan catch.",
-     "ingredients": ["Spaghetti", "Prawns", "Mussels", "Fish", "Tomato", "Garlic", "Parsley"], "allergens": ["Shellfish", "Fish", "Gluten"], "pairing": "Crisp white wine or lime soda"},
-    {"slug": "fire-grilled-steak", "name": "Fire-Grilled Steak", "cat": "Steaks & Grill", "price": 520, "tag": "Signature", "veg": false, "spice": 1, "serves": "1 guest", "prep": "25 min",
-     "short": "Open-flame steak, seared hard and rested, with house pepper sauce.",
-     "long": "Our namesake. A tender cut grilled over open flame for a smoky crust and a juicy centre, rested, sliced and served with fries and our house pepper sauce. Tell us how you like it cooked and we will match it.",
-     "ingredients": ["Steak cut", "Sea salt", "Cracked pepper", "Pepper sauce", "Fries"], "allergens": ["Dairy"], "pairing": "Cold beer or a bold red"},
-    {"slug": "pepper-steak-platter", "name": "Pepper Steak Platter", "cat": "Steaks & Grill", "price": 560, "tag": "Platter", "veg": false, "spice": 1, "serves": "1 to 2 guests", "prep": "25 min",
-     "short": "Sizzling sliced steak with asparagus, carrots and peppercorn jus.",
-     "long": "Sliced steak arrives on a hot skillet with charred asparagus, glazed carrots and a peppercorn jus, still sizzling at the table. Generous enough to share, elegant enough not to.",
-     "ingredients": ["Steak", "Asparagus", "Carrots", "Thyme", "Peppercorn jus"], "allergens": ["Dairy"], "pairing": "Red wine or dark beer"},
-    {"slug": "spinach-momos", "name": "Spinach Momos", "cat": "Thai & Asian", "price": 240, "tag": "Guest favourite", "veg": true, "spice": 1, "serves": "1 to 2 guests", "prep": "15 min",
-     "short": "Large steamed spinach dumplings with a fiery red dip.",
-     "long": "Guests keep praising these. Emerald dumplings, generous in size, filled with spinach and soft cheese and steamed until silky. Served with a punchy red chilli dip that wakes everything up.",
-     "ingredients": ["Spinach", "Cheese", "Ginger", "Garlic", "Chilli dip"], "allergens": ["Gluten", "Dairy"], "pairing": "Tender coconut or iced tea"},
-    {"slug": "crispy-dumplings", "name": "Crispy Dumplings", "cat": "Thai & Asian", "price": 260, "tag": "", "veg": false, "spice": 2, "serves": "1 to 2 guests", "prep": "15 min",
-     "short": "Pan-fried dumplings with a golden base and chilli-soy dip.",
-     "long": "Pleated dumplings pan-fried until the base turns golden and crisp while the top stays tender. Served with a tangy chilli-soy dip. Best eaten hot, shared fast.",
-     "ingredients": ["Dumpling wrapper", "Chicken", "Spring onion", "Soy", "Chilli"], "allergens": ["Gluten", "Soy"], "pairing": "Fresh lime soda"},
-    {"slug": "red-thai-curry", "name": "Red Thai Curry", "cat": "Thai & Asian", "price": 380, "tag": "", "veg": false, "spice": 3, "serves": "1 guest", "prep": "20 min",
-     "short": "Coconut red curry with fragrant basil and jasmine rice.",
-     "long": "A silky coconut curry built on red chilli paste, lemongrass and kaffir lime, finished with fresh basil. Served with steamed jasmine rice to soak up every drop. Warming, aromatic and properly spicy.",
-     "ingredients": ["Red curry paste", "Coconut milk", "Lemongrass", "Kaffir lime", "Basil", "Jasmine rice"], "allergens": ["Shellfish paste"], "pairing": "Chilled lime soda"},
-    {"slug": "veg-thai-curry", "name": "Veg Thai Curry", "cat": "Thai & Asian", "price": 320, "tag": "Vegetarian", "veg": true, "spice": 2, "serves": "1 guest", "prep": "20 min",
-     "short": "Seasonal vegetables in a fragrant Thai coconut broth.",
-     "long": "Crisp seasonal vegetables simmered in a fragrant coconut broth with lemongrass, ginger and lime leaf, topped with fresh herbs. A light, bright vegetarian main served with jasmine rice.",
-     "ingredients": ["Seasonal vegetables", "Coconut milk", "Lemongrass", "Ginger", "Lime leaf", "Jasmine rice"], "allergens": [], "pairing": "Tender coconut water"},
-    {"slug": "fresh-lime-soda", "name": "Fresh Lime Soda", "cat": "Drinks", "price": 90, "tag": "", "veg": true, "spice": 0, "serves": "1 guest", "prep": "3 min",
-     "short": "Hand-squeezed lime over soda. Sweet, salted or both.",
-     "long": "The beach classic. Fresh limes squeezed to order over chilled soda, served sweet, salted or mixed. Cuts through spice and cools a hot Goan afternoon.",
-     "ingredients": ["Fresh lime", "Soda", "Sugar or salt", "Ice"], "allergens": [], "pairing": "Anything spicy"}
-  ]
+ "_note": "Source of truth for the menu. PRICES ARE ESTIMATES until the owner confirms them. Fields: travels = holds up well for delivery; img = reuse another dish's photo; ru = Russian name. After editing run: python3 build.py",
+ "categories": [
+  "Breakfast",
+  "Combos",
+  "Seafood",
+  "Steaks & Grill",
+  "Thai & Asian",
+  "Pasta",
+  "Desserts",
+  "Drinks"
+ ],
+ "dishes": [
+  {
+   "slug": "king-fish-thali",
+   "name": "King Fish Thali",
+   "cat": "Seafood",
+   "price": 420,
+   "tag": "Chef's pick",
+   "veg": false,
+   "spice": 2,
+   "serves": "1 guest",
+   "prep": "20 min",
+   "short": "Goan fish curry, fried kingfish, rice and sides on a steel thali.",
+   "long": "The dish on our chalkboard that guests ask for first. A slice of kingfish, rolled in rava and shallow fried until the crust crackles, sits beside a bowl of coconut and kokum fish curry, steamed rice, a crisp papad and a cooling sol kadi. It is the whole Goan coast on one plate.",
+   "ingredients": [
+    "Kingfish",
+    "Coconut",
+    "Kokum",
+    "Red chilli",
+    "Rice",
+    "Rava crust"
+   ],
+   "allergens": [
+    "Fish"
+   ],
+   "pairing": "Fresh lime soda or chilled sol kadi",
+   "travels": true,
+   "ru": "Тали с королевской макрелью"
+  },
+  {
+   "slug": "king-fish-fillet",
+   "name": "King Fish Fillet",
+   "cat": "Seafood",
+   "price": 480,
+   "tag": "Popular",
+   "veg": false,
+   "spice": 1,
+   "serves": "1 guest",
+   "prep": "20 min",
+   "short": "Pan-seared fillet with garlic butter, lemon and seasonal greens.",
+   "long": "A thick fillet of kingfish seared skin-side down for a golden edge, finished with garlic butter and a squeeze of lemon. Served over sauteed greens, it lets the fish do the talking. Light, clean and quietly indulgent.",
+   "ingredients": [
+    "Kingfish",
+    "Garlic butter",
+    "Lemon",
+    "Seasonal greens",
+    "Black pepper"
+   ],
+   "allergens": [
+    "Fish",
+    "Dairy"
+   ],
+   "pairing": "Fresh lime soda",
+   "travels": false,
+   "ru": "Филе королевской макрели"
+  },
+  {
+   "slug": "goan-fish-curry-rice",
+   "name": "Goan Fish Curry Rice",
+   "cat": "Seafood",
+   "price": 320,
+   "tag": "Local classic",
+   "veg": false,
+   "spice": 2,
+   "serves": "1 guest",
+   "prep": "15 min",
+   "short": "Tangy coconut fish curry over steamed rice, the way Goan homes make it.",
+   "long": "Fresh catch simmered in a tangy, brick-red coconut gravy sharpened with kokum and Goan chillies. Served with a mound of steamed rice, it is everyday Goan comfort food, honest and deeply flavoured.",
+   "ingredients": [
+    "Fresh catch",
+    "Coconut",
+    "Kokum",
+    "Goan chillies",
+    "Steamed rice"
+   ],
+   "allergens": [
+    "Fish"
+   ],
+   "pairing": "Tender coconut water",
+   "travels": true,
+   "ru": "Гоанское рыбное карри с рисом"
+  },
+  {
+   "slug": "grilled-fish-lime",
+   "name": "Grilled Fish with Lime",
+   "cat": "Seafood",
+   "price": 460,
+   "tag": "",
+   "veg": false,
+   "spice": 2,
+   "serves": "1 guest",
+   "prep": "20 min",
+   "short": "Marinated fish grilled over high heat with charred lime and herbs.",
+   "long": "Fish marinated in a bright blend of lime, garlic and chilli, then grilled hard until the edges caramelise. A charred lime on the side adds smoky acidity. Simple technique, big flavour.",
+   "ingredients": [
+    "Fresh fish",
+    "Lime",
+    "Garlic",
+    "Chilli",
+    "Herbs"
+   ],
+   "allergens": [
+    "Fish"
+   ],
+   "pairing": "Chilled beer or fresh lime soda",
+   "travels": false,
+   "ru": "Рыба на гриле с лаймом"
+  },
+  {
+   "slug": "seafood-pasta",
+   "name": "Seafood Pasta",
+   "cat": "Pasta",
+   "price": 420,
+   "tag": "",
+   "veg": false,
+   "spice": 1,
+   "serves": "1 guest",
+   "prep": "20 min",
+   "short": "Spaghetti tossed with prawns, mussels and fish in a garlic tomato sauce.",
+   "long": "Al dente spaghetti folded through a garlicky tomato and white wine sauce, loaded with the day's seafood. Finished with parsley and a drizzle of olive oil. A European favourite, cooked with a Goan catch.",
+   "ingredients": [
+    "Spaghetti",
+    "Prawns",
+    "Mussels",
+    "Fish",
+    "Tomato",
+    "Garlic",
+    "Parsley"
+   ],
+   "allergens": [
+    "Shellfish",
+    "Fish",
+    "Gluten"
+   ],
+   "pairing": "Crisp white wine or lime soda",
+   "travels": true,
+   "ru": "Паста с морепродуктами"
+  },
+  {
+   "slug": "fire-grilled-steak",
+   "name": "Fire-Grilled Steak",
+   "cat": "Steaks & Grill",
+   "price": 520,
+   "tag": "Signature",
+   "veg": false,
+   "spice": 1,
+   "serves": "1 guest",
+   "prep": "25 min",
+   "short": "Open-flame steak, seared hard and rested, with house pepper sauce.",
+   "long": "Our namesake. A tender cut grilled over open flame for a smoky crust and a juicy centre, rested, sliced and served with fries and our house pepper sauce. Tell us how you like it cooked and we will match it.",
+   "ingredients": [
+    "Steak cut",
+    "Sea salt",
+    "Cracked pepper",
+    "Pepper sauce",
+    "Fries"
+   ],
+   "allergens": [
+    "Dairy"
+   ],
+   "pairing": "Cold beer or a bold red",
+   "travels": false,
+   "ru": "Стейк на открытом огне"
+  },
+  {
+   "slug": "pepper-steak-platter",
+   "name": "Pepper Steak Platter",
+   "cat": "Steaks & Grill",
+   "price": 560,
+   "tag": "Platter",
+   "veg": false,
+   "spice": 1,
+   "serves": "1 to 2 guests",
+   "prep": "25 min",
+   "short": "Sizzling sliced steak with asparagus, carrots and peppercorn jus.",
+   "long": "Sliced steak arrives on a hot skillet with charred asparagus, glazed carrots and a peppercorn jus, still sizzling at the table. Generous enough to share, elegant enough not to.",
+   "ingredients": [
+    "Steak",
+    "Asparagus",
+    "Carrots",
+    "Thyme",
+    "Peppercorn jus"
+   ],
+   "allergens": [
+    "Dairy"
+   ],
+   "pairing": "Red wine or dark beer",
+   "travels": true,
+   "ru": "Перечный стейк (сет)"
+  },
+  {
+   "slug": "spinach-momos",
+   "name": "Spinach Momos",
+   "cat": "Thai & Asian",
+   "price": 240,
+   "tag": "Guest favourite",
+   "veg": true,
+   "spice": 1,
+   "serves": "1 to 2 guests",
+   "prep": "15 min",
+   "short": "Large steamed spinach dumplings with a fiery red dip.",
+   "long": "Guests keep praising these. Emerald dumplings, generous in size, filled with spinach and soft cheese and steamed until silky. Served with a punchy red chilli dip that wakes everything up.",
+   "ingredients": [
+    "Spinach",
+    "Cheese",
+    "Ginger",
+    "Garlic",
+    "Chilli dip"
+   ],
+   "allergens": [
+    "Gluten",
+    "Dairy"
+   ],
+   "pairing": "Tender coconut or iced tea",
+   "travels": true,
+   "ru": "Момо со шпинатом"
+  },
+  {
+   "slug": "crispy-dumplings",
+   "name": "Crispy Dumplings",
+   "cat": "Thai & Asian",
+   "price": 260,
+   "tag": "",
+   "veg": false,
+   "spice": 2,
+   "serves": "1 to 2 guests",
+   "prep": "15 min",
+   "short": "Pan-fried dumplings with a golden base and chilli-soy dip.",
+   "long": "Pleated dumplings pan-fried until the base turns golden and crisp while the top stays tender. Served with a tangy chilli-soy dip. Best eaten hot, shared fast.",
+   "ingredients": [
+    "Dumpling wrapper",
+    "Chicken",
+    "Spring onion",
+    "Soy",
+    "Chilli"
+   ],
+   "allergens": [
+    "Gluten",
+    "Soy"
+   ],
+   "pairing": "Fresh lime soda",
+   "travels": false,
+   "ru": "Хрустящие пельмени"
+  },
+  {
+   "slug": "red-thai-curry",
+   "name": "Red Thai Curry",
+   "cat": "Thai & Asian",
+   "price": 380,
+   "tag": "",
+   "veg": false,
+   "spice": 3,
+   "serves": "1 guest",
+   "prep": "20 min",
+   "short": "Coconut red curry with fragrant basil and jasmine rice.",
+   "long": "A silky coconut curry built on red chilli paste, lemongrass and kaffir lime, finished with fresh basil. Served with steamed jasmine rice to soak up every drop. Warming, aromatic and properly spicy.",
+   "ingredients": [
+    "Red curry paste",
+    "Coconut milk",
+    "Lemongrass",
+    "Kaffir lime",
+    "Basil",
+    "Jasmine rice"
+   ],
+   "allergens": [
+    "Shellfish paste"
+   ],
+   "pairing": "Chilled lime soda",
+   "travels": true,
+   "ru": "Красное тайское карри"
+  },
+  {
+   "slug": "veg-thai-curry",
+   "name": "Veg Thai Curry",
+   "cat": "Thai & Asian",
+   "price": 320,
+   "tag": "Vegetarian",
+   "veg": true,
+   "spice": 2,
+   "serves": "1 guest",
+   "prep": "20 min",
+   "short": "Seasonal vegetables in a fragrant Thai coconut broth.",
+   "long": "Crisp seasonal vegetables simmered in a fragrant coconut broth with lemongrass, ginger and lime leaf, topped with fresh herbs. A light, bright vegetarian main served with jasmine rice.",
+   "ingredients": [
+    "Seasonal vegetables",
+    "Coconut milk",
+    "Lemongrass",
+    "Ginger",
+    "Lime leaf",
+    "Jasmine rice"
+   ],
+   "allergens": [],
+   "pairing": "Tender coconut water",
+   "travels": true,
+   "ru": "Овощное тайское карри"
+  },
+  {
+   "slug": "fresh-lime-soda",
+   "name": "Fresh Lime Soda",
+   "cat": "Drinks",
+   "price": 90,
+   "tag": "",
+   "veg": true,
+   "spice": 0,
+   "serves": "1 guest",
+   "prep": "3 min",
+   "short": "Hand-squeezed lime over soda. Sweet, salted or both.",
+   "long": "The beach classic. Fresh limes squeezed to order over chilled soda, served sweet, salted or mixed. Cuts through spice and cools a hot Goan afternoon.",
+   "ingredients": [
+    "Fresh lime",
+    "Soda",
+    "Sugar or salt",
+    "Ice"
+   ],
+   "allergens": [],
+   "pairing": "Anything spicy",
+   "travels": true,
+   "ru": "Лаймовая содовая"
+  },
+  {
+   "slug": "full-english-breakfast",
+   "name": "Full Breakfast Platter",
+   "cat": "Breakfast",
+   "price": 350,
+   "tag": "From 7 am",
+   "veg": false,
+   "spice": 0,
+   "serves": "1 guest",
+   "prep": "15 min",
+   "short": "Eggs your way, sausages, beans, mushrooms, tomato and toast.",
+   "long": "The way to start a beach day. Eggs cooked how you like them, sausages, baked beans, sauteed mushrooms, grilled tomato and buttered toast, with tea or coffee on the side if you ask.",
+   "ingredients": [
+    "Eggs",
+    "Sausages",
+    "Baked beans",
+    "Mushrooms",
+    "Tomato",
+    "Toast"
+   ],
+   "allergens": [
+    "Egg",
+    "Gluten",
+    "Dairy"
+   ],
+   "pairing": "Masala chai or fresh coffee",
+   "travels": true,
+   "ru": "Большой завтрак"
+  },
+  {
+   "slug": "banana-pancakes",
+   "name": "Banana Pancakes",
+   "cat": "Breakfast",
+   "price": 220,
+   "tag": "",
+   "veg": true,
+   "spice": 0,
+   "serves": "1 guest",
+   "prep": "12 min",
+   "short": "Fluffy stack with banana, berries and honey.",
+   "long": "A tall stack of soft pancakes layered with sliced banana and berries, finished with a pour of honey. A Goan beach-shack favourite for slow mornings.",
+   "ingredients": [
+    "Pancake batter",
+    "Banana",
+    "Berries",
+    "Honey"
+   ],
+   "allergens": [
+    "Gluten",
+    "Egg",
+    "Dairy"
+   ],
+   "pairing": "Fresh lime soda",
+   "travels": false,
+   "ru": "Банановые панкейки"
+  },
+  {
+   "slug": "cheese-omelette-skillet",
+   "name": "Cheese Omelette Skillet",
+   "cat": "Breakfast",
+   "price": 200,
+   "tag": "",
+   "veg": false,
+   "spice": 1,
+   "serves": "1 guest",
+   "prep": "10 min",
+   "short": "Fluffy eggs with cheese, peppers and herbs, served with toast.",
+   "long": "Eggs whisked light and cooked in a skillet with melted cheese, peppers, onion and fresh herbs. Served with buttered toast.",
+   "ingredients": [
+    "Eggs",
+    "Cheese",
+    "Peppers",
+    "Onion",
+    "Herbs",
+    "Toast"
+   ],
+   "allergens": [
+    "Egg",
+    "Dairy",
+    "Gluten"
+   ],
+   "pairing": "Masala chai",
+   "travels": true,
+   "ru": "Омлет с сыром"
+  },
+  {
+   "slug": "french-toast-berries",
+   "name": "French Toast & Berries",
+   "cat": "Breakfast",
+   "price": 220,
+   "tag": "",
+   "veg": true,
+   "spice": 0,
+   "serves": "1 guest",
+   "prep": "12 min",
+   "short": "Golden brioche-style toast with banana, blueberries and syrup.",
+   "long": "Thick slices soaked in vanilla custard, pan-fried golden, then piled with banana, blueberries and a dusting of sugar.",
+   "ingredients": [
+    "Bread",
+    "Egg custard",
+    "Banana",
+    "Blueberries",
+    "Syrup"
+   ],
+   "allergens": [
+    "Gluten",
+    "Egg",
+    "Dairy"
+   ],
+   "pairing": "Fresh coffee",
+   "travels": false,
+   "ru": "Французские тосты с ягодами"
+  },
+  {
+   "slug": "couples-feast",
+   "name": "Couple's Feast",
+   "cat": "Combos",
+   "price": 999,
+   "tag": "Best value",
+   "veg": false,
+   "spice": 1,
+   "serves": "2 guests",
+   "prep": "30 min",
+   "img": "pepper-steak-platter",
+   "short": "Pepper Steak Platter, Spinach Momos, Chocolate Brownie, 2 Lime Sodas. Free delivery.",
+   "long": "Dinner for two, sorted. Our sizzling Pepper Steak Platter to share, a plate of the spinach momos guests keep praising, a Chocolate Brownie to finish and two fresh lime sodas. Worth ₹1,160 a la carte, yours for ₹999, and it ships free.",
+   "ingredients": [
+    "Pepper Steak Platter",
+    "Spinach Momos",
+    "Chocolate Brownie",
+    "2 x Fresh Lime Soda"
+   ],
+   "allergens": [
+    "Gluten",
+    "Dairy",
+    "Egg"
+   ],
+   "pairing": "Perfect as is",
+   "travels": true,
+   "ru": "Ужин для двоих"
+  },
+  {
+   "slug": "family-seafood-feast",
+   "name": "Family Seafood Feast",
+   "cat": "Combos",
+   "price": 1499,
+   "tag": "Feeds 4",
+   "veg": false,
+   "spice": 2,
+   "serves": "3 to 4 guests",
+   "prep": "35 min",
+   "img": "king-fish-thali",
+   "short": "2 King Fish Thalis, Seafood Pasta, Crispy Dumplings, 2 Lime Sodas.",
+   "long": "A full spread for the family or the villa. Two King Fish Thalis, a Seafood Pasta, Crispy Dumplings to share and two fresh lime sodas. Free delivery included. Worth ₹1,700 a la carte.",
+   "ingredients": [
+    "2 x King Fish Thali",
+    "Seafood Pasta",
+    "Crispy Dumplings",
+    "2 x Fresh Lime Soda"
+   ],
+   "allergens": [
+    "Fish",
+    "Shellfish",
+    "Gluten"
+   ],
+   "pairing": "Add Chocolate Brownies for the table",
+   "travels": true,
+   "ru": "Семейный сет из морепродуктов"
+  },
+  {
+   "slug": "veg-feast",
+   "name": "Veggie Feast for Two",
+   "cat": "Combos",
+   "price": 899,
+   "tag": "Vegetarian",
+   "veg": true,
+   "spice": 2,
+   "serves": "2 guests",
+   "prep": "25 min",
+   "img": "veg-thai-curry",
+   "short": "Veg Thai Curry, Spinach Momos, Banana Pancakes, 2 Lime Sodas.",
+   "long": "A generous vegetarian meal for two: fragrant Veg Thai Curry with jasmine rice, Spinach Momos, Banana Pancakes for dessert and two fresh lime sodas. Worth ₹960 a la carte.",
+   "ingredients": [
+    "Veg Thai Curry",
+    "Spinach Momos",
+    "Banana Pancakes",
+    "2 x Fresh Lime Soda"
+   ],
+   "allergens": [
+    "Gluten",
+    "Dairy",
+    "Egg"
+   ],
+   "pairing": "Tender coconut water",
+   "travels": true,
+   "ru": "Вегетарианский сет для двоих"
+  },
+  {
+   "slug": "chocolate-brownie",
+   "name": "Chocolate Brownie",
+   "cat": "Desserts",
+   "price": 180,
+   "tag": "Sweet finish",
+   "veg": true,
+   "spice": 0,
+   "serves": "1 guest",
+   "prep": "5 min",
+   "short": "Fudgy dark chocolate brownie, warm on request.",
+   "long": "Dense, fudgy and deeply chocolatey, with a crackled top. Ask for it warm. The easiest way to end any meal.",
+   "ingredients": [
+    "Dark chocolate",
+    "Butter",
+    "Cocoa",
+    "Sugar"
+   ],
+   "allergens": [
+    "Gluten",
+    "Egg",
+    "Dairy"
+   ],
+   "pairing": "Fresh coffee",
+   "travels": true,
+   "ru": "Шоколадный брауни"
+  }
+ ]
 }

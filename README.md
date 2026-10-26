@@ -2,40 +2,58 @@
 
 Multi-page website and direct-ordering site for **Dragon Steak House – Bar & Restaurant**, Temb Vaddo beach, Morjim, Goa 403512. Rated 4.4 on Google, open daily 7 am–11 pm.
 
-Live: https://dragon-steak-house.vercel.app (auto-deploys from `main` on Vercel)
-[Google Maps listing](https://www.google.co.in/maps/place/Dragon+Steak+House/@15.6182533,73.7348903,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfe9f9f8fcde5b:0x385e6ba110c0665b!8m2!3d15.6182481!4d73.7374652!16s%2Fg%2F11h8jy7752)
+- Live: https://dragon-steak-house.vercel.app (auto-deploys from `main` on Vercel)
+- [Google Maps listing](https://www.google.co.in/maps/place/Dragon+Steak+House/@15.6182533,73.7348903,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfe9f9f8fcde5b:0x385e6ba110c0665b!8m2!3d15.6182481!4d73.7374652!16s%2Fg%2F11h8jy7752)
+- Owner action plan: [`docs/GROWTH-PLAYBOOK.md`](docs/GROWTH-PLAYBOOK.md)
 
 ## Pages
 | Page | Purpose |
 |---|---|
-| `index.html` | Home: hero, signature dishes, story, how delivery works |
-| `menu.html` | Full menu with category filter and add-to-order |
-| `dishes/<slug>.html` | One page per dish: photo, description, ingredients, allergens, spice, pairing, related dishes (12 pages) |
+| `index.html` | Home: animated hero, morning breakfast block (before 11 am), feasts, signature dishes, story, how delivery works |
+| `menu.html` | Full menu with category filter (`menu.html#Combos` opens one category) |
+| `dishes/<slug>.html` | One page per dish (20): photo, description, Russian name, ingredients, allergens, spice, serving, "travels well" note, pairing, related dishes |
+| `offers.html` | Welcome offer, free delivery, loyalty, feasts, breakfast, celebrations |
+| `gallery.html` | Photo gallery with lightbox |
+| `events.html` | Birthdays and group dinners, enquiry form that opens WhatsApp |
 | `about.html` | Our story |
-| `visit.html` | Address, hours, embedded map, contact, delivery FAQ |
+| `visit.html` | Address, hours, map, contact, delivery FAQ, table booking form |
+| `menu-ru.html` | Russian menu (Меню на русском) with ordering |
+| `partners.html` | Printable QR menu cards for villas and guesthouses (not indexed) |
 
-Design: light ivory, terracotta and sage palette, Cormorant Garamond serif, arched photography, scroll reveals, floating dish photos, hover zoom, mobile-first.
+## Ordering, delivery and sales features
+- Cart drawer on every page, saved in the browser. Add-to-order shows a toast and flies a dot to the cart.
+- **Delivery:** no distance limit. Free at a food subtotal of ₹1000 or more, ₹50 below that in the local zone (`LOCAL_KM`, default 5 km). When the customer shares a location the cart shows the distance. Beyond the local zone the fee is confirmed on chat before payment.
+- **Upsell:** the cart suggests dishes that close the gap to free delivery, or a drink or dessert.
+- **Welcome offer:** ₹50 off the first direct order of ₹500 or more, applied in the cart (per device).
+- **Loyalty:** every 6th order from a device is flagged in the message with a free Fresh Lime Soda.
+- **Feasts:** Couple's Feast ₹999, Family Seafood Feast ₹1,499, Veggie Feast ₹899, each cheaper than a la carte.
+- **Scheduling:** "As soon as possible" or "Schedule for later". When closed, scheduling is preselected.
+- **Checkout:** pre-filled order in **WhatsApp** or **Telegram** (+91 86985 64244). Pay by **UPI / Google Pay** (`kajirana94@oksbi`, one-tap button) or cash on delivery.
+- **Partner referrals:** QR cards link to `/?ref=<property>`. Orders include "Referred by".
+- **Analytics:** Vercel Web Analytics script plus events `add_to_cart`, `open_cart`, `send_order`, `enquiry`. Enable Analytics in the Vercel project settings.
+- **SEO:** Restaurant and MenuItem schema, sitemap, robots, Open Graph tags.
 
-## Ordering and delivery
-- Cart drawer on every page, saved in the browser.
-- **No distance limit.** Free delivery at a food subtotal of ₹1000 or more, ₹50 below that in the local zone. For farther addresses the fee is confirmed by distance over chat before payment.
-- Checkout opens a pre-filled order in **WhatsApp** or **Telegram** (+91 86985 64244). Pay by **UPI / Google Pay** (`kajirana94@oksbi`, with a one-tap pay button) or cash on delivery.
-- Settings live in `CONFIG` at the top of `cart.js`.
+Settings live in `CONFIG` at the top of `cart.js`. Offer wording lives in `OFFERS` in `build.py`.
+
+## Design
+Light ivory, terracotta and sage palette. Cormorant Garamond with Inter. Custom dragon-and-flame logo (`assets/logo.svg`), line illustrations (palm, wave ornaments), arched photography, word-by-word headline reveal, rising smoke over the steak, swaying palm, scroll reveals, count-up stats, hover zoom, page transitions, and a mobile menu. Respects reduced-motion settings.
 
 ## Editing the menu
-The menu is generated. Edit `data/dishes.json`, then run:
+The site is generated. Edit `data/dishes.json`, then run:
 
 ```
 python3 build.py
 ```
 
-This rewrites every page, `menu.js`, `sitemap.xml` and `robots.txt`. Commit and push to redeploy. Set `SITE` in `build.py` once a custom domain is added.
+This rewrites every page, `menu.js`, `sitemap.xml`, `robots.txt` and `assets/logo.svg`. Commit and push to redeploy. Set `SITE` in `build.py` once a custom domain is added.
 
-## Before relying on it (owner)
-1. **Prices are estimates.** No public source lists this restaurant's itemised menu or prices (Zomato and Restaurant Guru block automated access and show no item list). Dishes are based on the chalkboard in the Google Maps photo and dishes guests mention in reviews (momos, seafood, steaks, noodles and rice). Confirm names and prices in `data/dishes.json`.
-2. **Photos are illustrative.** Dish photos are free-licence Unsplash images, not photos of the restaurant's own plates. Replace them by dropping files into `assets/dishes/` with the same names. The storefront photo (`assets/hero.jpg`) is from the Google Maps listing.
-3. Add the phone number and this website to the Google Business Profile.
-4. Optional: Restaurant Guru lists a WhatsApp number (99753 04260) in an owner reply. This site uses +91 86985 64244.
+Dish fields: `price`, `cat`, `tag`, `veg`, `spice` (0–3), `travels` (holds up for delivery), `img` (reuse another dish's photo), `ru` (Russian name).
+
+## Still needed from the owner
+1. **Prices are estimates.** No public source lists this restaurant's itemised menu. Dishes come from the Google Maps chalkboard photo and from reviews, plus new breakfast, feast and dessert items. Confirm everything in `data/dishes.json`.
+2. **Photos are illustrative.** Dish and scenery photos are free-licence Unsplash images. The storefront photo (`assets/hero.jpg`) is from Google Maps. Replace files in `assets/dishes/` and `assets/gallery/` with real photos of the same names.
+3. **WhatsApp number:** Restaurant Guru shows an owner reply pointing to 99753 04260. This site uses +91 86985 64244.
+4. Google Business Profile, partner drop-offs and Instagram: see the playbook.
 
 ## Hosting
 Static site, no build step needed to serve. Vercel project `dragon-steak-house`, connected to this repository.
