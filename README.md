@@ -56,7 +56,7 @@ Dish fields: `price`, `cat`, `tag`, `veg`, `spice` (0–3), `travels` (holds up 
    |---|---|---|
    | `assets/gallery/deck.jpg` | Thatched upstairs deck | Home hero, gallery, Open Graph/schema image |
    | `assets/gallery/deck-trees.jpg` | Deck tables among the trees | Events, gallery |
-   | `assets/gallery/about-deck.jpg` | Thatched deck, 4:5 crop (640×800) made to fit the arched frame | Our Story (About) hero |
+   | `assets/gallery/about-dining.jpg` | Ground-floor dining room and bar, 4:5 crop (899×1124) of `dining-room.jpg` made to fit the arched frame | Our Story (About) hero |
    | `assets/gallery/bar.jpg` | Bar | Gallery |
    | `assets/gallery/dining-room.jpg` | Ground-floor dining and bar | Gallery |
    | `assets/gallery/storefront.jpg` | Front of the restaurant with the dome oven | Visit, gallery |
