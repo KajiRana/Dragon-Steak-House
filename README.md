@@ -51,8 +51,21 @@ Dish fields: `price`, `cat`, `tag`, `veg`, `spice` (0–3), `travels` (holds up 
 
 ## Still needed from the owner
 1. **Prices are estimates.** No public source lists this restaurant's itemised menu. Dishes come from the Google Maps chalkboard photo and from reviews, plus new breakfast, feast and dessert items. The King Fish item is shown as King Fish Rava Fry, since the restaurant does not serve a thali. Confirm everything in `data/dishes.json`.
-2. **Photos are illustrative.** Dish and scenery photos are free-licence Unsplash images. The storefront photo (`assets/hero.jpg`) is from Google Maps. Replace files in `assets/dishes/` and `assets/gallery/` with real photos of the same names.
-   - `assets/dishes/seafood-platter.jpg` (Family Seafood Feast card): "Skaldjursplatå" (real photo: tiered platter of oysters, crab claws, langoustines and prawns) by I99pema, Wikimedia Commons, CC BY-SA 4.0.
+2. **Photos.** The restaurant's own photos (shot on a realme 7 Pro, November 2026) are used for the venue and seafood. They were cropped to remove the camera watermark, colour-graded warm, sharpened and compressed to about 1600px. A guest in the dining-room shot is softly blurred.
+   | File | Shows | Used on |
+   |---|---|---|
+   | `assets/gallery/deck.jpg` | Thatched upstairs deck | Home hero, gallery, Open Graph/schema image |
+   | `assets/gallery/deck-trees.jpg` | Deck tables among the trees | Events, gallery |
+   | `assets/gallery/bar.jpg` | Bar | About, gallery |
+   | `assets/gallery/dining-room.jpg` | Ground-floor dining and bar | Gallery |
+   | `assets/gallery/storefront.jpg` | Front of the restaurant with the dome oven | Visit, gallery |
+   | `assets/gallery/pizza-oven.jpg` | Wood-fired oven | Gallery |
+   | `assets/gallery/fresh-catch.jpg` | Fish on ice | Gallery |
+   | `assets/gallery/fresh-lobster.jpg` | Raw painted lobsters | Gallery |
+   | `assets/gallery/staircase.jpg` | Stairs to the deck | Gallery |
+   | `assets/dishes/lobster-thermidor.jpg` | Lobster plate as served | Family Seafood Feast card and page, gallery |
+
+   Other dish photos are still illustrative free-licence images; replace files in `assets/dishes/` with real photos of the same names. The Unsplash scenery photos and the Google Maps storefront photo were removed.
    - `assets/dishes/king-fish-rava-fry.jpg` (King Fish Rava Fry): "Seer Fish Fry" by Nithin bolar k, Wikimedia Commons, CC BY-SA 3.0.
 3. **WhatsApp number:** Restaurant Guru shows an owner reply pointing to 99753 04260. This site uses +91 86985 64244.
 4. Google Business Profile, partner drop-offs and Instagram: see the playbook.

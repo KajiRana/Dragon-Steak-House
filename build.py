@@ -25,7 +25,7 @@ by = {d["slug"]: d for d in D}
 def head(title, desc, p, extra=""):
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(desc)}">
-<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{SITE}/assets/hero.jpg">
+<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{SITE}/assets/gallery/deck.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="{p}assets/logo.svg" type="image/svg+xml"><meta name="theme-color" content="#fbf7f0">
@@ -71,7 +71,7 @@ write("assets/logo.svg", LOGO.replace('class="logo" ', 'xmlns="http://www.w3.org
 # ---------- home
 sig = [by[s] for s in ("king-fish-rava-fry", "fire-grilled-steak", "spinach-momos", "seafood-pasta", "red-thai-curry", "king-fish-fillet")]
 rib = "".join(f"<span>{t}</span>" for t in ("Free delivery over ₹1000", "Open daily 7 am – 11 pm", "We deliver anywhere", "Pay by UPI or Google Pay", "Steaks · Seafood · Thai", "Morjim Beach, Goa")) * 2
-ld = json.dumps({"@context": "https://schema.org", "@type": "Restaurant", "name": "Dragon Steak House", "image": f"{SITE}/assets/hero.jpg", "servesCuisine": ["Steak", "Seafood", "Thai", "Goan"], "priceRange": "₹₹", "telephone": f"+{PHONE}", "url": SITE, "hasMenu": f"{SITE}/menu.html", "acceptsReservations": True,
+ld = json.dumps({"@context": "https://schema.org", "@type": "Restaurant", "name": "Dragon Steak House", "image": [f"{SITE}/assets/gallery/deck.jpg", f"{SITE}/assets/gallery/storefront.jpg", f"{SITE}/assets/gallery/bar.jpg"], "servesCuisine": ["Steak", "Seafood", "Thai", "Goan"], "priceRange": "₹₹", "telephone": f"+{PHONE}", "url": SITE, "hasMenu": f"{SITE}/menu.html", "acceptsReservations": True,
     "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "bestRating": "5", "ratingCount": "78"},
     "address": {"@type": "PostalAddress", "streetAddress": "Temb Vaddo, beach", "addressLocality": "Morjim", "addressRegion": "Goa", "postalCode": "403512", "addressCountry": "IN"},
     "geo": {"@type": "GeoCoordinates", "latitude": 15.6182481, "longitude": 73.7374652}, "openingHours": "Mo-Su 07:00-23:00", "hasMap": MAPS})
@@ -82,7 +82,7 @@ home = head("Dragon Steak House | Steaks, Goan Seafood & Thai in Morjim", "Drago
 <p class="lead">Fire-grilled steaks, kingfish rava fry, spinach momos and Thai curries, served on a laterite-stone shack by the river. Dine with us, or have it brought to wherever you are staying.</p>
 <div class="cta"><a class="btn pri" href="menu.html">Order now</a><a class="btn sec" href="visit.html">Visit &amp; delivery</a></div>
 <div class="proof"><div><b>4.4 ★</b>Google rating</div><div><b>7 am – 11 pm</b>Open every day</div><div><b>₹0</b>Delivery over ₹1000</div></div></div>
-<div class="arch"><div class="main"><img src="assets/hero.jpg" alt="Dragon Steak House storefront on Morjim beach"></div>
+<div class="arch"><div class="main"><img src="assets/gallery/deck.jpg" alt="Thatched upstairs dining deck at Dragon Steak House with prayer flags, palms and wicker chairs"></div>
 <div class="float f1"><img src="assets/dishes/fire-grilled-steak.jpg" alt=""><i class="smoke"></i><i class="smoke s2"></i><i class="smoke s3"></i></div><div class="float f2"><img src="assets/dishes/spinach-momos.jpg" alt=""></div>
 <div class="seal"><div><b>7–11</b>open daily</div></div></div></div>{PALM}</section>
 <div class="ribbon"><div>{rib}</div></div>
@@ -140,7 +140,7 @@ for d in D:
 # ---------- about
 write("about.html", head("Our Story | Dragon Steak House, Morjim", "A laterite-stone shack on Morjim beach serving steaks, Goan seafood and Thai food by the river.", "") + header("", "about") + f"""
 {phead("Our story", "A shack, a flame and the Goan coast")}
-<section style="padding-top:30px"><div class="wrap split"><div class="frame reveal"><img src="assets/hero.jpg" alt="Dragon Steak House entrance with chalkboard menu"></div>
+<section style="padding-top:30px"><div class="wrap split"><div class="frame reveal"><img src="assets/gallery/bar.jpg" alt="The bar at Dragon Steak House under its tiled roof, with palms in front"></div>
 <div class="reveal d1"><h2>Red laterite, thatch and a chalkboard that changes daily</h2>
 <p class="lead">Dragon Steak House stands at Temb Vaddo on Morjim beach, a few steps from the river. The pillars are local laterite, the roof is thatch, and the menu is written fresh each day.</p>
 <p class="lead" style="margin-top:16px">Our idea is simple: cook good food over real fire, lean on the local catch, and welcome everyone like a neighbour. Steaks share the board with Goan fish curry, momos and Thai curries because that is how our guests, travellers and locals alike, like to eat.</p></div></div></section>
@@ -163,6 +163,8 @@ faqs = [("Do you deliver everywhere?", "Yes, there is no distance limit. Deliver
         ("Is there vegetarian food?", "Yes. Spinach Momos, Veg Thai Curry, Banana Pancakes, the Veggie Feast and more are vegetarian, and every dish page shows allergens.")]
 write("visit.html", head("Visit & Delivery | Dragon Steak House, Morjim", "Temb Vaddo beach, Morjim, Goa 403512. Open 7 am to 11 pm. Free delivery over ₹1000. Call, WhatsApp or Telegram +91 86985 64244.", "") + header("", "visit") + f"""
 {phead("Visit &amp; delivery", "Find us, or let us find you")}
+<section style="padding-top:30px"><div class="wrap split"><div class="frame reveal"><img src="assets/gallery/storefront.jpg" alt="Front of Dragon Steak House at Temb Vaddo, with the white wood-fired oven by the gate"></div>
+<div class="reveal d1"><span class="eyebrow">Spot us from the road</span><h2>Look for the white wood-fired oven</h2><p class="lead">Two floors with striped pillars at Temb Vaddo, Morjim. Our dome oven sits by the front gate, and the thatched deck is upstairs.</p></div></div></section>
 <section style="padding-top:30px"><div class="wrap"><div class="cards">
 <div class="card reveal"><h3>Address</h3><p>Temb Vaddo, beach,<br>Morjim, Goa 403512</p><br><a href="{MAPS}" target="_blank" rel="noopener">Open in Google Maps →</a></div>
 <div class="card reveal d1"><h3>Hours</h3><p>Every day<br>7:00 am – 11:00 pm</p></div>
@@ -184,17 +186,18 @@ write("offers.html", head("Offers | Dragon Steak House, Morjim", "Welcome discou
 <p class="note center" style="margin-top:30px">Offers apply to direct orders on this website, WhatsApp and Telegram. One welcome offer per customer. We may update offers at any time.</p></div></section>""" + footer(""))
 
 # ---------- gallery
-GAL = [("assets/hero.jpg", "Our shack at Temb Vaddo, with today's chalkboard", "wide"), ("assets/dishes/fire-grilled-steak.jpg", "Steak over open flame", ""), ("assets/dishes/spinach-momos.jpg", "Spinach momos", ""),
-       ("assets/gallery/river-sunset.jpg", "Evening on the water near Morjim", "tall"), ("assets/dishes/king-fish-rava-fry.jpg", "King Fish Rava Fry", ""), ("assets/dishes/seafood-pasta.jpg", "Seafood pasta", ""),
-       ("assets/gallery/goa-coast.jpg", "The North Goa coastline", "wide"), ("assets/dishes/full-english-breakfast.jpg", "Breakfast, from 7 am", ""), ("assets/dishes/red-thai-curry.jpg", "Red Thai curry", ""),
-       ("assets/dishes/pepper-steak-platter.jpg", "Pepper steak platter", "tall"), ("assets/gallery/beach-evening.jpg", "Golden hour on the beach", ""), ("assets/dishes/chocolate-brownie.jpg", "Chocolate brownie", "")]
+GAL = [("assets/gallery/deck.jpg", "Our thatched upstairs deck", "wide"), ("assets/dishes/lobster-thermidor.jpg", "Lobster, the way we plate it", ""), ("assets/gallery/fresh-lobster.jpg", "Fresh lobster from the boats", ""),
+       ("assets/gallery/dining-room.jpg", "Ground-floor dining and bar", "tall"), ("assets/gallery/bar.jpg", "The bar", ""), ("assets/gallery/fresh-catch.jpg", "Today's catch on ice", ""),
+       ("assets/gallery/deck-trees.jpg", "Tables among the trees", "wide"), ("assets/gallery/pizza-oven.jpg", "Our wood-fired oven", "tall"), ("assets/gallery/storefront.jpg", "Find us at Temb Vaddo", ""),
+       ("assets/gallery/staircase.jpg", "Up to the deck", ""), ("assets/dishes/fire-grilled-steak.jpg", "Steak over open flame", ""), ("assets/dishes/spinach-momos.jpg", "Spinach momos", ""),
+       ("assets/dishes/king-fish-rava-fry.jpg", "King Fish Rava Fry", ""), ("assets/dishes/pepper-steak-platter.jpg", "Pepper steak platter", ""), ("assets/dishes/red-thai-curry.jpg", "Red Thai curry", "")]
 write("gallery.html", head("Gallery | Dragon Steak House, Morjim", "Photos of Dragon Steak House, our dishes and Morjim beach.", "") + header("", "gallery") + phead("Gallery", "Fire, food and the Goan coast") + f"""
 <section style="padding-top:30px"><div class="wrap"><div class="gal">{"".join(f'<figure class="reveal {c}" data-lightbox><img loading="lazy" src="{s}" alt="{e(t)}"><figcaption>{e(t)}</figcaption></figure>' for s, t, c in GAL)}</div>
-<p class="note center" style="margin-top:24px">The storefront photo is our own. Dish and scenery photos are illustrative while we shoot our own.</p></div></section>""" + footer(""))
+<p class="note center" style="margin-top:24px">Restaurant, lobster and fresh-catch photos are our own. Other dish photos are illustrative while we shoot our own.</p></div></section>""" + footer(""))
 
 # ---------- events / table booking (WhatsApp enquiry)
 write("events.html", head("Events & Private Dining | Dragon Steak House, Morjim", "Birthdays, group dinners and celebrations upstairs by the river at Dragon Steak House, Morjim.", "") + header("", "events") + phead("Events &amp; tables", "Celebrate by the river", "Birthdays, anniversaries and villa-group dinners, with set menus and upstairs river-view seating.") + f"""
-<section style="padding-top:30px"><div class="wrap split"><div class="frame reveal"><img loading="lazy" src="assets/gallery/river-sunset.jpg" alt="Sunset over the water"></div>
+<section style="padding-top:30px"><div class="wrap split"><div class="frame reveal"><img loading="lazy" src="assets/gallery/deck-trees.jpg" alt="Upstairs deck tables surrounded by trees"></div>
 <div class="reveal d1"><span class="eyebrow">Plan with us</span><h2>Tell us the date. We will handle the feast.</h2>
 <ul class="ticks"><li>Upstairs river-view tables or ground floor for easy access</li><li>Group set menus built from our feasts</li><li>Birthdays and anniversaries, bring your cake or ask us</li><li>Delivery feasts for villa parties</li></ul>{book_form}</div></div></section>""" + footer(""))
 
