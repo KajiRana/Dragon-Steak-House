@@ -52,6 +52,8 @@ Dish fields: `price`, `cat`, `tag`, `veg`, `spice` (0–3), `travels` (holds up 
 ## Still needed from the owner
 1. **Prices are estimates.** No public source lists this restaurant's itemised menu. Dishes come from the Google Maps chalkboard photo and from reviews, plus new breakfast, feast and dessert items. The King Fish item is shown as King Fish Rava Fry, since the restaurant does not serve a thali. Confirm everything in `data/dishes.json`.
 2. **Photos are illustrative.** Dish and scenery photos are free-licence Unsplash images. The storefront photo (`assets/hero.jpg`) is from Google Maps. Replace files in `assets/dishes/` and `assets/gallery/` with real photos of the same names.
+   - `assets/dishes/seafood-platter.jpg` (Family Seafood Feast card): "Skaldjursplatå" by I99pema, Wikimedia Commons, CC BY-SA 4.0.
+   - `assets/dishes/king-fish-rava-fry.jpg` (King Fish Rava Fry): "Seer Fish Fry" by Nithin bolar k, Wikimedia Commons, CC BY-SA 3.0.
 3. **WhatsApp number:** Restaurant Guru shows an owner reply pointing to 99753 04260. This site uses +91 86985 64244.
 4. Google Business Profile, partner drop-offs and Instagram: see the playbook.
 
