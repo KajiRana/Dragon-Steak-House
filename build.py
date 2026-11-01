@@ -140,8 +140,8 @@ for d in D:
 # ---------- about
 write("about.html", head("Our Story | Dragon Steak House, Morjim", "A laterite-stone shack on Morjim beach serving steaks, Goan seafood and Thai food by the river.", "") + header("", "about") + f"""
 {phead("Our story", "A shack, a flame and the Goan coast")}
-<section style="padding-top:30px"><div class="wrap split"><div class="frame reveal"><img src="assets/gallery/bar.jpg" alt="The bar at Dragon Steak House under its tiled roof, with palms in front"></div>
-<div class="reveal d1"><h2>Red laterite, thatch and a chalkboard that changes daily</h2>
+<section style="padding-top:30px"><div class="wrap split"><div class="frame reveal"><img src="assets/gallery/about-deck.jpg" alt="Thatched roof and palm on the upstairs deck at Dragon Steak House"></div>
+<div class="reveal d1"><h2>Laterite, thatch and a menu that changes daily</h2>
 <p class="lead">Dragon Steak House stands at Temb Vaddo on Morjim beach, a few steps from the river. The pillars are local laterite, the roof is thatch, and the menu is written fresh each day.</p>
 <p class="lead" style="margin-top:16px">Our idea is simple: cook good food over real fire, lean on the local catch, and welcome everyone like a neighbour. Steaks share the board with Goan fish curry, momos and Thai curries because that is how our guests, travellers and locals alike, like to eat.</p></div></div></section>
 <section class="sand"><div class="wrap"><div class="center"><span class="eyebrow">What we believe</span><h2>Three simple promises</h2></div>
